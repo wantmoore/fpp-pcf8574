@@ -1,7 +1,23 @@
 {
+  "repoName": "fpp-pcf8574",
   "name": "PCF8574 Driver",
   "author": "Justin Moore",
-  "version": "1.0.0",
-  "description": "Configures and loads a PCF8574 I2C GPIO expander at boot",
-  "homepage": "https://github.com/wantmoore/fpp-pcf8574"
+  "description": "Configures and loads a PCF8574 I2C GPIO expander at boot via FPP.",
+  "homeURL": "https://github.com/wantmoore/fpp-pcf8574",
+  "srcURL": "https://github.com/wantmoore/fpp-pcf8574.git",
+  "bugURL": "https://github.com/wantmoore/fpp-pcf8574/issues",
+  "versions": [
+    {
+      "minFPPVersion": 6.0,
+      "maxFPPVersion": 0,
+      "branch": "main",
+      "allowUpdates": 1,
+      "sha": "",
+      "dependencies": {
+        "plugins": [],
+        "packages": [],
+        "scripts": []
+      }
+    }
+  ]
 }
