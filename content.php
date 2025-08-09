@@ -1,15 +1,13 @@
 <?php
-require_once("pluginSetup.php");
-
-$configFile = PLUGIN_PATH . '/config.json';
-$config = json_decode(file_get_contents($configFile), true);
-
+$pluginPath = __DIR__;
+$configFile = $pluginPath . '/config.json';
+if (!file_exists($configFile)) { file_put_contents($configFile, json_encode(["i2c_bus"=>"1","i2c_addr"=>"0x21"], JSON_PRETTY_PRINT)); }
 if (isset($_POST['save'])) {
-    $config['i2c_bus'] = $_POST['i2c_bus'];
-    $config['i2c_addr'] = $_POST['i2c_addr'];
-    file_put_contents($configFile, json_encode($config, JSON_PRETTY_PRINT));
-    exec("sudo bash " . PLUGIN_PATH . "/scripts/install_driver.sh > /dev/null 2>&1 &");
-    echo '<div class="alert alert-success">Settings saved and service updated.</div>';
+    $cfg = ["i2c_bus" => trim($_POST['i2c_bus']), "i2c_addr" => trim($_POST['i2c_addr'])];
+    file_put_contents($configFile, json_encode($cfg, JSON_PRETTY_PRINT));
+    file_put_contents($pluginPath.'/config.env', "I2C_BUS={$cfg['i2c_bus']}\nI2C_ADDR={$cfg['i2c_addr']}\n");
+    exec('sudo bash ' . $pluginPath . '/scripts/install_driver.sh > /dev/null 2>&1 &');
+    echo '<div class="alert alert-success">Settings saved.</div>';
 }
 ?>
 
