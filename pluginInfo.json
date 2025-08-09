@@ -6,13 +6,13 @@
   "homeURL": "https://github.com/wantmoore/fpp-pcf8574",
   "srcURL": "https://github.com/wantmoore/fpp-pcf8574.git",
   "bugURL": "https://github.com/wantmoore/fpp-pcf8574/issues",
+  "allowUpdates": 1,
   "versions": [
     {
-      "minFPPVersion": 6.0,
-      "maxFPPVersion": 0,
       "branch": "main",
-      "allowUpdates": 1,
       "sha": "",
+      "minFPPVersion": "6.0",
+      "maxFPPVersion": "0.0",
       "dependencies": {
         "plugins": [],
         "packages": [],
