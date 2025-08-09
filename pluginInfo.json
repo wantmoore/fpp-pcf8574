@@ -13,11 +13,7 @@
       "sha": "",
       "minFPPVersion": "6.0",
       "maxFPPVersion": "0.0",
-      "dependencies": {
-        "plugins": [],
-        "packages": [],
-        "scripts": []
-      }
+      "dependencies": { "plugins": [], "packages": [], "scripts": [] }
     }
   ]
 }
