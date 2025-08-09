@@ -1,0 +1,12 @@
+[Unit]
+Description=Load fpp-pcf8574 GPIO driver
+After=multi-user.target
+ConditionPathExists=/usr/local/bin/fpp-pcf8574.sh
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fpp-pcf8574.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

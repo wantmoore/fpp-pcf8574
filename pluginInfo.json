@@ -1,0 +1,7 @@
+{
+  "name": "PCF8574 Driver",
+  "author": "Justin Moore",
+  "version": "1.0.0",
+  "description": "Configures and loads a PCF8574 I2C GPIO expander at boot",
+  "homepage": "https://github.com/wantmoore/fpp-pcf8574"
+}
